@@ -9,3 +9,8 @@ https://shaswat-satyam.github.io/Weather-App/
 
 ## Stack
 HTML/CSS/JS
+
+### Todo
+- [ ] Prettify the UI
+- [ ] Add Animations to the page
+- [ ] Clean the index.css
