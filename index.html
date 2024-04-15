@@ -1,16 +1,26 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Weather App</title>
     <link href="style.css" type="text/css" rel="stylesheet" />
     <script src="script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <input type="text" id="city" placeholder="location" />
-    <button type="button" id="submit" onclick="addRow()">Get Weather</button>
-    <h1></h1>
+  <body class="text-white p-20 bg-black">
+    <button
+      onclick="toggleForm()"
+      class="text-[34px] bg-black font-extrabold hover:font-normal text-gray"
+    >
+      Weather
+    </button>
+    <div class="form">
+      <input type="text" id="city" placeholder="location" />
+      <button type="button" id="submit" onclick="addRow()">
+        Fetch Weather
+      </button>
+    </div>
     <table>
       <thead>
         <td>Name</td>

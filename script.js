@@ -65,3 +65,11 @@ const input = document.querySelector("input#city");
 const button = document.querySelector("button#submit");
 const table = document.querySelector("table");
 const heading = document.querySelector("h1");
+const form = document.querySelector("div.form");
+
+let formHidden = false;
+function toggleForm() {
+  console.log("toogle");
+  formHidden = !formHidden;
+  form.hidden = formHidden;
+}
