@@ -7,31 +7,52 @@
     <link href="style.css" type="text/css" rel="stylesheet" />
     <script src="script.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="./cloudy.png" />
   </head>
-  <body class="text-white p-20 bg-black">
-    <button
-      onclick="toggleForm()"
-      class="text-[34px] bg-black font-extrabold hover:font-normal text-gray"
-    >
-      Weather
-    </button>
-    <div class="form">
-      <input type="text" id="city" placeholder="location" />
-      <button type="button" id="submit" onclick="addRow()">
+  <body
+    class="p-20 bg-black"
+    style="
+      background-image: url(pexels-pixabay-164357.jpg);
+      background-size: 100%;
+    "
+  >
+    <div class="flex gap-5">
+      <div class="loading"></div>
+      <button
+        onclick="toggleForm()"
+        class="text-[34px] text-white font-extrabold hover:px-1 hover:font-medium text-gray"
+      >
+        Weather
+      </button>
+    </div>
+    <div class="form text-white">
+      <input
+        type="text"
+        id="city"
+        class="bg-blue-200 text-gray-600 py-2 px-2 rounded border-b-4 border-blue-400"
+        placeholder="Location"
+      />
+      <button
+        class="bg-blue-500 text-white py-2 px-2 rounded border-b-4 border-blue-700 hover:bg-blue-400"
+        type="button"
+        id="submit"
+        onclick="addRow()"
+      >
         Fetch Weather
       </button>
     </div>
-    <table>
-      <thead>
-        <td>Name</td>
-        <td>Country</td>
-        <td>Temperature</td>
-        <td>Wind Speed</td>
-        <td>Wind Direction</td>
-        <td>humidity</td>
-        <td>Feels like</td>
-        <td>Weather</td>
+    <table class="text-white text-center my-4 w-full table-auto">
+      <thead class="gap-1">
+        <td class="px-2 border">Name</td>
+        <td class="px-2 border">Country</td>
+        <td class="px-2 border">Temperature</td>
+        <td class="px-2 border">Wind Speed</td>
+        <td class="px-2 border">Wind Direction</td>
+        <td class="px-2 border">Humidity</td>
+        <td class="px-2 border">Feels like</td>
+        <td class="px-2 border">Weather</td>
       </thead>
+      <tbody class="bg-gray-100"></tbody>
     </table>
   </body>
 </html>
